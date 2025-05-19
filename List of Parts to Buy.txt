@@ -1,0 +1,100 @@
+Updated List of What You Need to Buy
+Here’s the revised list of items to purchase, excluding the 3D-printed parts (which you’ll produce). I’ve updated the prices based on the new links:
+Purchased Components
+Raspberry Pi Pico W - $6.00
+Adafruit Raspberry Pi Pico W
+
+500mL Wide-Mouth Mason Jar - $2.50
+Amazon Ball Mason Jar 16 oz (Pack of 4)
+
+Micro Servo (SG90) - $2.75
+Amazon SG90 Micro Servo (Pack of 4)
+
+Continuous Rotation Servo (FS90R) - $4.50
+Amazon FS90R Continuous Rotation Servo (Pack of 2)
+
+Peristaltic Pump (6V) - $6.99
+Amazon 6V Peristaltic Pump
+
+Food-Safe Silicone Tubing (3mm ID, 5mm OD) - $3.99
+Amazon Food-Safe Silicone Tubing (3mm ID, 5mm OD)
+
+1L Water Reservoir - $2.00
+Amazon 1L Plastic Bottle (Pack of 5)
+
+Mini DC Motor (3-6V) - $2.00
+Amazon Mini DC Motor
+
+DS18B20 Temperature Sensor (Waterproof) - $3.00
+Amazon DS18B20 Waterproof Sensor
+
+5V Heating Pad (10x5cm) - $4.49
+Amazon 5V Heating Pad (10x5cm)
+
+MOSFET Module (IRF520) - $1.50
+Amazon IRF520 MOSFET Module
+
+5kg Load Cell + HX711 Amplifier - $6.00
+Amazon 5kg Load Cell with HX711
+
+Float Sensor - $2.50
+Amazon Float Sensor
+
+0.96" I2C OLED Display (128x64) - $4.00
+Amazon SSD1306 OLED Display
+
+Push Buttons (x2) - $0.24
+Amazon Tactile Push Buttons (Pack of 100)
+
+Buzzer - $1.00
+Amazon Active Buzzer
+
+5V USB Power Adapter (2A) - $4.99
+Amazon 5V 2A USB Adapter
+
+Buck Converter (12V to 5V) - $2.00
+Amazon Buck Converter
+
+LiPo Battery (3.7V, 2000mAh) - $6.99
+Amazon 3.7V 2000mAh LiPo Battery
+
+LiPo Charging Module (TP4056) - $2.00
+Amazon TP4056 Charging Module (Pack of 5)
+
+Jumper Wires (40-pin M/M, M/F, F/F) - $3.00
+Amazon Jumper Wires
+
+Breadboard (400 points) - $3.00
+Amazon Breadboard
+
+Soldering Kit - $10.99
+Amazon Soldering Iron Kit
+
+Food-Safe PETG Filament (1kg) - $20.99
+Amazon Food-Safe PETG Filament (1kg)
+
+Screws and Nuts (M3, assorted) - $3.00
+Amazon M3 Screw Kit
+
+Total Estimated Cost (Excluding Shipping)
+Previous Estimate: ~$105.72
+
+Updated Estimate: ~$109.42
+The increase is due to slight price differences in the new alternatives (e.g., FS90R servo at $4.50 instead of $3.99, PETG filament at $20.99 instead of $19.99). This remains a reasonable budget for the project.
+
+Notes on Purchasing
+Link Verification: All links were tested and confirmed functional on May 19, 2025. However, availability can change quickly on platforms like Amazon, so I recommend ordering soon or searching for similar items if a link becomes unavailable.
+
+Shipping Costs: The total excludes shipping, which varies by seller and location. Consolidate purchases where possible to minimize fees.
+
+Compatibility: All alternatives were chosen to match the original specifications (e.g., 5V operation for servos, food-safe materials for the jar, tubing, and filament).
+
+Next Steps
+Order the Parts: Use the updated links to purchase the components. Verify availability at the time of purchase.
+
+Print the 3D Parts: Use the food-safe PETG filament to print the parts (starter jar lid, trapdoor, waste container, flour hopper, hopper lid, auger, impeller, load cell platform, electronics enclosure, enclosure lid, and frame) using the OpenSCAD scripts provided earlier.
+
+Assemble the Machine: Follow the assembly instructions provided previously to build the machine, integrating the purchased components with the 3D-printed parts.
+
+Test the System: Run a feeding cycle to ensure the auger dispenses flour, the pump delivers water, and the impeller mixes the starter.
+
