@@ -1,0 +1,121 @@
+Assembly Instructions
+Now that the parts are printed, let’s assemble the machine using the 3D-printed parts and purchased components. I’ll assume you have all the items from the updated list (Raspberry Pi Pico W, mason jar, SG90 servo, FS90R servo, peristaltic pump, silicone tubing, 1L water reservoir, mini DC motor, DS18B20 sensor, heating pad, MOSFET module, load cell, float sensor, OLED display, buttons, buzzer, power adapter, buck converter, LiPo battery, TP4056 module, jumper wires, breadboard, soldering kit, PETG filament, screws).
+Step 1: Prepare the Frame
+Components: Frame (3D-printed), M3 screws and nuts.
+
+Instructions:
+Place the frame on a flat surface. The base should be 200mm wide x 150mm deep, with two vertical rails extending 200mm tall.
+
+Ensure the mounting points for the flour hopper (top) and load cell platform (base) are aligned. If the frame was printed in multiple parts (due to bed size), assemble them using M3 screws and nuts.
+
+Verify stability; the frame should stand firmly without wobbling.
+
+Step 2: Assemble the Load Cell Platform
+Components: Load cell platform (3D-printed), 5kg load cell + HX711 amplifier, M3 screws and nuts, 500mL mason jar, 5V heating pad.
+
+Instructions:
+Mount the 5kg load cell to the underside of the load cell platform using M3 screws. The load cell should be centered, with its strain gauge facing down.
+
+Attach the load cell’s base to the frame’s bottom mounting points using M3 screws, ensuring the platform sits level.
+
+Peel the adhesive backing off the 5V heating pad (10x5cm) and stick it to the underside of the platform, below where the jar will sit.
+
+Place the 500mL mason jar on the platform to test fit. The jar should sit securely without wobbling. The platform’s surface (120x120mm) should accommodate the jar’s 86mm diameter.
+
+Step 3: Assemble the Flour Hopper and Auger
+Components: Flour hopper (3D-printed), hopper lid (3D-printed), auger (3D-printed), FS90R continuous rotation servo, M3 screws.
+
+Instructions:
+Mount the flour hopper between the frame’s vertical rails at the top, using M3 screws through the hopper’s mounting tabs (designed in the OpenSCAD script).
+
+Insert the auger into the 15mm hole at the hopper’s base. The auger should rotate freely without excessive play.
+
+Attach the FS90R servo to the hopper’s side (where designed in the script) using M3 screws. Align the servo horn with the auger’s 3mm servo slot and secure the horn to the auger with the servo’s included screw.
+
+Test the auger’s rotation by manually turning the servo horn. It should move flour downward through the hole.
+
+Place the hopper lid on top for now (it’s removable for refilling).
+
+Step 4: Assemble the Starter Jar Lid and Mechanisms
+Components: Starter jar lid (3D-printed), trapdoor (3D-printed), SG90 micro servo, mini DC motor (3-6V), impeller (3D-printed), DS18B20 temperature sensor, silicone tubing (3mm ID, 5mm OD), M3 screws.
+
+Instructions:
+Attach the SG90 micro servo to the lid’s servo mount (designed in the script) using M3 screws. Align the servo horn with the trapdoor’s hinge and secure it with a small screw or pin (you may need to use a 2mm metal rod as a hinge pin).
+
+Test the trapdoor’s movement by manually rotating the servo horn; it should open and close the 20x10mm hole in the lid.
+
+Mount the mini DC motor to the lid’s motor mount (designed in the script) using M3 screws or adhesive (depending on the motor’s design). Attach the impeller to the motor shaft (3mm diameter), ensuring it fits snugly. The impeller should extend into the jar when the lid is on.
+
+Insert the DS18B20 temperature sensor (waterproof probe) through the 5mm hole in the lid, positioning the probe to extend into the jar (about 20mm below the lid). Secure with a dab of food-safe silicone sealant if needed.
+
+Thread the silicone tubing through the 5mm hole designated for water dispensing. Position the tube to dispense water into the jar (about 10mm below the lid). Secure with a small clamp or sealant if necessary.
+
+Step 5: Set Up the Water Dispensing System
+Components: 1L water reservoir (plastic jar), float sensor, peristaltic pump (6V), silicone tubing (3mm ID, 5mm OD).
+
+Instructions:
+Place the 1L plastic jar (water reservoir) on the frame’s base, next to the load cell platform.
+
+Insert the float sensor into the jar through the wide mouth, positioning it to detect low water levels (e.g., when the water drops below 200mL). Secure the sensor to the jar’s cap with adhesive or a small clamp.
+
+Mount the 6V peristaltic pump to the frame (near the reservoir) using M3 screws or double-sided tape.
+
+Cut two lengths of silicone tubing: one from the reservoir to the pump’s inlet, and one from the pump’s outlet to the jar lid’s water hole (already threaded in Step 4). Connect the tubing to the pump, ensuring a tight fit to prevent leaks.
+
+Test the pump manually (if possible) by applying 6V power to ensure water flows from the reservoir to the jar.
+
+Step 6: Assemble the Waste Container
+Components: Waste container (3D-printed).
+
+Instructions:
+Slide the waste container into the slot below the load cell platform, directly under the jar lid’s trapdoor.
+
+Ensure the container aligns with the trapdoor (20x10mm hole) to catch discarded starter when the trapdoor opens.
+
+The container should be removable for emptying; test sliding it in and out to confirm fit.
+
+Step 7: Final Assembly and Positioning
+Instructions:
+Place the jar (with lid assembled) on the load cell platform, ensuring the auger’s output (15mm hole in the hopper) aligns with the 10mm hole in the jar lid for flour dispensing.
+
+Verify that the trapdoor, when open, drops waste into the waste container below.
+
+Double-check that the impeller, temperature sensor, and water tube extend into the jar appropriately (impeller should reach near the bottom, sensor about 20mm down, tube just below the lid).
+
+Secure the jar lid to the jar (if the script included screw threads, screw it on; otherwise, use a friction fit or small clamps).
+
+Step 8: Electronics Setup (Wiring Not Included in Image)
+Note: Since the electronics were removed from the image per your request, I’ll briefly outline their placement for future reference, but you can skip this step for now if you’re not ready to wire the system.
+
+Components: Electronics enclosure (3D-printed), enclosure lid (3D-printed), Raspberry Pi Pico W, OLED display, push buttons, buzzer, MOSFET module, jumper wires, breadboard, 5V USB power adapter, buck converter, LiPo battery, TP4056 module.
+
+Instructions:
+Mount the electronics enclosure to the frame’s side (designed in the script) using M3 screws.
+
+Place the Pico W, breadboard, and other electronics inside the enclosure.
+
+Secure the OLED display, push buttons, and buzzer in their respective cutouts on the enclosure.
+
+Use the buck converter to step down voltage for the 6V peristaltic pump if needed.
+
+Connect the LiPo battery and TP4056 module for backup power.
+
+Route wires to the servos, pump, motor, sensors, and heating pad (wiring details omitted as requested).
+
+Step 9: Test the Mechanical Assembly
+Instructions:
+Manually rotate the FS90R servo to test the auger’s flour dispensing. Fill the hopper with a small amount of flour and confirm it drops into the jar through the lid’s hole.
+
+Manually open the trapdoor with the SG90 servo to ensure waste would fall into the waste container.
+
+Spin the mini DC motor to test the impeller’s mixing action inside the jar (fill the jar with water to simulate the starter).
+
+Pour water into the reservoir and manually activate the peristaltic pump to confirm water dispenses into the jar through the tube.
+
+Additional Notes
+Fit Adjustments: If any parts don’t fit (e.g., auger too tight in the hopper, impeller not fitting the motor shaft), adjust the OpenSCAD scripts (e.g., increase tolerances by 0.2mm) and reprint. For example, if the auger’s servo slot is too tight, modify servo_slot_size in auger.scad to 3.2mm and regenerate the STL.
+
+Food Safety: Before using the machine with actual sourdough starter, wash all food-contact parts (jar, lid, auger, hopper, impeller, waste container, silicone tubing) with soap and water. Optionally, sterilize with a diluted vinegar solution.
+
+Calibration: Once the electronics are added, you’ll need to calibrate the load cell (for weight), temperature sensor, and pump (for water volume per cycle). This can be done later when you’re ready to wire the system.
+
