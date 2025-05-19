@@ -1,0 +1,161 @@
+Recommended Print Settings for 3D-Printed Parts
+The 3D-printed parts for your machine include the starter jar lid, trapdoor, waste container, flour hopper, hopper lid, auger, impeller, load cell platform, electronics enclosure, enclosure lid, and frame. These parts were designed in OpenSCAD scripts provided earlier, and you’ll be printing them using food-safe PETG filament (as listed in your parts: Polymaker PETG Filament, 1.75mm, 1kg).
+General Print Settings for All Parts
+Material: Food-safe PETG (e.g., Polymaker PolyLite PETG)
+PETG is food-safe, durable, and slightly flexible, making it ideal for parts like the auger and impeller that experience mechanical stress.
+
+Nozzle Temperature: 240°C
+PETG typically prints well between 230–250°C. 240°C ensures good layer adhesion without stringing.
+
+Bed Temperature: 70°C
+A heated bed at 70°C helps PETG adhere well and reduces warping.
+
+Layer Height: 0.2mm
+This provides a good balance between detail and print time. Most parts don’t require fine details, but the auger and impeller benefit from this resolution for smooth surfaces.
+
+Infill: 100%
+Since most parts are small and functional (e.g., auger, impeller), 100% infill ensures strength and durability. For larger parts like the frame and electronics enclosure, you can reduce to 20–30% if desired, but I’ll specify below.
+
+Print Speed: 40mm/s
+A slower speed ensures good layer adhesion for PETG, especially for small, detailed parts like the auger.
+
+Cooling: 50% fan speed after the first layer
+PETG benefits from moderate cooling to prevent warping while maintaining layer bonding.
+
+Supports: Enable supports for parts with overhangs (e.g., auger, hopper, impeller)
+Use tree supports for easier removal, especially for the auger’s helical thread and the impeller’s blades.
+
+Build Plate Adhesion: Use a brim (5mm wide) for small parts
+Parts like the auger and impeller have small bases, so a brim helps with bed adhesion.
+
+Printer Setup: Ensure your bed is leveled, and apply a thin layer of glue stick or painter’s tape on the bed for better PETG adhesion.
+
+Specific Print Settings by Part
+Starter Jar Lid
+File: lid.scad
+
+Orientation: Flat side down (the side that sits on the jar).
+
+Supports: Yes, for the holes and servo mount overhangs.
+
+Infill: 100% (small part, needs strength for mounting the motor and servo).
+
+Notes: The lid has holes for the water tube, auger, stirring motor, and temperature sensor. Print slowly around these features to ensure accuracy.
+
+Trapdoor
+File: trapdoor.scad
+
+Orientation: Flat side down.
+
+Supports: No (should print flat without overhangs).
+
+Infill: 100% (small part, needs to withstand servo movement).
+
+Notes: Ensure the hinge pin hole is clear after printing; you may need to drill it out with a 2mm bit if there’s stringing.
+
+Waste Container
+File: waste_container.scad
+
+Orientation: Open side up.
+
+Supports: No (simple box shape).
+
+Infill: 20% (large part, doesn’t need high strength).
+
+Notes: This catches discarded starter, so ensure the walls are watertight (use 3 perimeters if your slicer allows).
+
+Flour Hopper
+File: flour_hopper.scad
+
+Orientation: Base down (narrow end with the auger hole on the bed).
+
+Supports: Yes, for the conical interior.
+
+Infill: 30% (large part, needs moderate strength to hold flour).
+
+Notes: The 15mm hole at the base must align with the auger. Check for warping during printing, as PETG can shrink slightly.
+
+Hopper Lid
+File: hopper_lid.scad
+
+Orientation: Flat side down.
+
+Supports: No (simple flat disc).
+
+Infill: 20% (doesn’t need high strength).
+
+Notes: Ensure the diameter (100mm) fits the hopper snugly. You may need to sand the edges slightly for a good fit.
+
+Auger
+File: auger.scad
+
+Orientation: Vertically, with the servo slot at the bottom.
+
+Supports: Yes, tree supports for the helical thread.
+
+Infill: 100% (small, needs strength to dispense flour).
+
+Notes: The auger’s helical thread has significant overhangs, so supports are crucial. Print slowly (30mm/s) to ensure the thread forms correctly. Check the 3mm servo slot for fit with the FS90R servo horn; you may need to widen it slightly (e.g., to 3.2mm) if it’s too tight.
+
+Impeller
+File: impeller.scad
+
+Orientation: Flat side down (base of the blades on the bed).
+
+Supports: Yes, for the blades (45-degree overhangs).
+
+Infill: 100% (small, needs strength for mixing).
+
+Notes: The blades should be sturdy. Remove supports carefully to avoid breaking them. Check the shaft hole (3mm) for fit with the mini DC motor; drill out if needed.
+
+Load Cell Platform
+File: load_cell_platform.scad
+
+Orientation: Flat side down.
+
+Supports: No (flat design).
+
+Infill: 30% (needs moderate strength to support the jar).
+
+Notes: Ensure the mounting holes for the 5kg load cell align with its screw holes (typically 4mm apart). Test-fit the mason jar (86mm diameter) to confirm it sits securely.
+
+Electronics Enclosure
+File: electronics_enclosure.scad
+
+Orientation: Base down.
+
+Supports: Yes, for the cutouts (OLED, buttons, USB).
+
+Infill: 20% (large part, doesn’t need high strength).
+
+Notes: Print in PLA if you prefer (since it doesn’t contact food). Check that the cutouts align with the OLED display (128x64) and buttons.
+
+Enclosure Lid
+File: enclosure_lid.scad
+
+Orientation: Flat side down.
+
+Supports: No (simple flat piece).
+
+Infill: 20%.
+
+Notes: Ensure the screw holes align with the enclosure. Use M3 screws to secure it.
+
+Frame
+File: frame.scad
+
+Orientation: Base down.
+
+Supports: Yes, for the vertical rails and mounting points.
+
+Infill: 30% (needs strength to support the hopper and jar).
+
+Notes: Print in PLA for rigidity (since it doesn’t contact food). The frame dimensions (200mm wide, 150mm deep, 200mm tall) should fit all components. Check for warping on the vertical rails.
+
+Post-Processing
+Support Removal: Carefully remove supports from parts like the auger and impeller using pliers. Sand any rough edges with 400-grit sandpaper.
+
+Food-Safe Finishing: For food-contact parts (auger, hopper, jar lid, impeller, waste container), wash thoroughly with soap and water after printing. Optionally, coat with food-safe epoxy (e.g., FDA-approved epoxy resin) to seal any small gaps and ensure hygiene.
+
+Fit Testing: Test-fit moving parts (auger in hopper, impeller on motor, trapdoor on lid) before assembly. Sand or adjust dimensions in the OpenSCAD scripts if fits are too tight or loose.
+
